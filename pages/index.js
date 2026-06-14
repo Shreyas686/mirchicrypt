@@ -1,5 +1,5 @@
 import LoadingFullScreen, { Button } from "../components/helping";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/react";
 import styles from "../styles/home.scss";
 import { useRouter } from "next/router";
 import Nav, { SideDrawer, Backdrop } from "../components/nav";
