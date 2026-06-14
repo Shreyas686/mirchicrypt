@@ -1,21 +1,18 @@
-const withPlugins = require('next-compose-plugins');
-const withSass = require('@zeit/next-sass');
-const withSvgr = require('next-svgr');
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: false,
+  // This replaces the old @zeit/next-sass plugin entirely
+  sassOptions: {
+    CSSModules: true,
+  },
+  // Keeps your SVGs working cleanly without the old next-svgr plugin
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
+  },
+};
 
-// module.exports = withSass({
-// 	cssModules: true,
-// });
-
-// module.exports = withSvgr({
-// 	// your config for other plugins or the general next.js here...
-// });
-
-module.exports = withPlugins([
-	[
-		withSass,
-		{
-			cssModules: true
-		},
-	],
-	withSvgr,
-]);
+module.exports = nextConfig;
