@@ -1,4 +1,4 @@
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 import LoadingFullScreen from "../components/helping";
 import axios from "axios";
