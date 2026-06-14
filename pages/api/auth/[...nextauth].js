@@ -1,5 +1,5 @@
 import NextAuth from "next-auth";
-import Providers from "next-auth/providers";
+import DiscordProvider from "next-auth/providers/discord";
 import axios from "axios";
 import connect from "../../../utils/dbConnect";
 import User from "../../../models/user";
@@ -7,11 +7,11 @@ import User from "../../../models/user";
 const login = (req, res) =>
   NextAuth(req, res, {
     providers: [
-      Providers.Discord({
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
-        scope: "identify email guilds.join",
-      }),
+     DiscordProvider({
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+  authorization: { params: { scope: "identify email guilds.join" } },
+}),
     ],
 
     callbacks: {
