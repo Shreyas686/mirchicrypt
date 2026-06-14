@@ -1,0 +1,36 @@
+
+
+.header {
+    padding-left: 3%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.point{
+    display: flex;
+    overflow-x: hidden;
+    margin-top: -10px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    &:nth-child(6){
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+   // align-items: center;
+
+    & h6{
+        margin-top: 0px;
+        font-size: 18px;
+        color: var(--primary);
+        margin-right: 10px;
+    }
+}
+
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}

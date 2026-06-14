@@ -1,0 +1,72 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  width: 100%;
+  //height: 100%;
+  overflow-x: hidden;
+  padding-top: 85px;
+
+  &__header {
+    padding-left: 3%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 25px;
+  }
+
+  &__lb {
+    //margin-top: 1025px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    &__row {
+      display: flex;
+      width: 100%;
+      border-top: 3px solid rgba(255, 255, 255, 0.3);
+      border-left: 3px solid rgba(255, 255, 255, 0.3);
+      border-right: 3px solid rgba(255, 255, 255, 0.3);
+      height: 40px;
+      margin-left: 10px;
+      background-color: rgba(245, 237, 237, 0.02);
+
+      &:last-child {
+        border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+        height: 44px;
+      }
+      &:first-child {
+        font-weight: 700;
+      }
+    }
+
+    &__sn {
+      width: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      border-right: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    &__username {
+      margin-left: 20px;
+      display: flex;
+      //justify-content: center;
+      align-items: center;
+      //font-weight: 500;
+    }
+
+    &__level {
+      right: 0;
+      text-align: right;
+      margin-left: auto;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      border-left: 3px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}
